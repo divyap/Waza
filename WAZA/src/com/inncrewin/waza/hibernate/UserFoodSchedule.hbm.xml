@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 8, 2013 11:35:09 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.inncrewin.waza.hibernate.UserFoodSchedule" table="USERFOODSCHEDULE">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="cookedItemId" type="java.lang.Long">
+            <column name="COOKED_ITEM_ID" />
+        </property>
+        <property name="userId" type="java.lang.Long">
+            <column name="USER_ID" />
+        </property>
+        <property name="date" type="java.util.Date">
+            <column name="DATE" />
+        </property>
+        <property name="quantity" type="java.lang.String">
+            <column name="QUANTITY" />
+        </property>
+        <property name="locationId" type="java.lang.Long">
+            <column name="LOCATION_ID" />
+        </property>
+        <property name="price" type="java.lang.String">
+            <column name="PRICE" />
+        </property>
+        <property name="wazaBucks" type="java.lang.String">
+            <column name="WAZA_BUCKS" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

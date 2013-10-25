@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory name="SessionFactory">
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.password">wazaroot</property>
+  <property name="hibernate.connection.url">jdbc:mysql://waza.cp8wd3ddgsq4.us-west-2.rds.amazonaws.com/waza</property>
+  <property name="hibernate.connection.username">wazaroot</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  
+  <property name="javax.persistence.validation.mode">none</property>
+  <property name="hibernate.current_session_context_class">thread</property>
+  <property name="jta.UserTransaction">UserTransaction</property>  
+ 
+  <mapping resource="com/inncrewin/waza/hibernate/CreditCardInfo.hbm.xml"/>
+  <mapping resource="com/inncrewin/waza/hibernate/CookedItem.hbm.xml"/>
+  <mapping resource="com/inncrewin/waza/hibernate/CookedItemIngredients.hbm.xml"/>
+  <mapping resource="com/inncrewin/waza/hibernate/Ingredient.hbm.xml"/>
+  <mapping resource="com/inncrewin/waza/hibernate/User.hbm.xml"/>
+  <mapping resource="com/inncrewin/waza/hibernate/UserFoodSchedule.hbm.xml"/>
+  <mapping resource="com/inncrewin/waza/hibernate/WazaCredits.hbm.xml"/>
+  <mapping resource="com/inncrewin/waza/hibernate/Order.hbm.xml"/>
+  <mapping resource="com/inncrewin/waza/hibernate/Location.hbm.xml"/>
+  
+ </session-factory>
+</hibernate-configuration>

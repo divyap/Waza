@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 8, 2013 11:35:09 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.inncrewin.waza.hibernate.CookedItem" table="COOKED_ITEM">
+        <id name="itemId" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="userId" type="java.lang.Long">
+            <column name="USER_ID" />
+        </property>
+        <property name="title" type="java.lang.String">
+            <column name="TITLE" />
+        </property>
+        <property name="description" type="java.lang.String">
+            <column name="DESCRIPTION" />
+        </property>
+        <property name="categoryId" type="java.lang.String">
+            <column name="CATEGORY_ID" />
+        </property>
+        <property name="subCategoryId" type="java.lang.String">
+            <column name="SUB_CATEGORY_ID" />
+        </property>
+        <property name="imagePath" type="java.lang.String">
+            <column name="IMAGE_PATH" />
+        </property>
+        <property name="price" type="java.lang.String">
+            <column name="PRICE" />
+        </property>
+        <property name="upvote" type="java.lang.String">
+            <column name="UPVOTE" />
+        </property>
+        <property name="downvote" type="java.lang.String">
+            <column name="DOWNVOTE" />
+        </property>
+        <property name="wazaBucks" type="java.lang.String">
+            <column name="WAZA_BUCKS" />
+        </property>
+        <property name="ingredients" type="java.lang.String">
+            <column name="INGREDIENTS" />
+        </property>
+        <property name="quantity" type="java.lang.String">
+            <column name="QUANTITY" />
+        </property>
+    </class>
+</hibernate-mapping>

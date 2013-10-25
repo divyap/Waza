@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 8, 2013 11:35:09 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <joined-subclass name="com.inncrewin.waza.hibernate.Consumer" extends="com.inncrewin.waza.hibernate.User" table="CONSUMER" lazy="false">
+        <key>
+            <column name="USERID" />
+        </key>
+        <property name="wazaBucks" type="java.lang.String">
+            <column name="WAZABUCKS" />
+        </property>
+        <property name="photo" type="java.lang.String">
+            <column name="PHOTO" />
+        </property>
+    </joined-subclass>
+</hibernate-mapping>

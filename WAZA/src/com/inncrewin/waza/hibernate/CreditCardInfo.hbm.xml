@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 8, 2013 11:35:09 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.inncrewin.waza.hibernate.CreditCardInfo" table="CREDITCARDINFO">
+        <id name="userId" type="java.lang.Long">
+            <column name="USERID" />
+            <generator class="assigned" />
+        </id>
+        <property name="creditCardNo" type="java.lang.String">
+            <column name="CREDITCARDNO" />
+        </property>
+        <property name="expiryDate" type="java.util.Date">
+            <column name="EXPIRYDATE" />
+        </property>
+        <property name="cvv" type="java.lang.String">
+            <column name="CVV" />
+        </property>
+        <property name="type" type="java.lang.String">
+            <column name="TYPE" />
+        </property>
+        <property name="needAuth" type="java.lang.String">
+            <column name="NEEDAUTH" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 8, 2013 12:25:58 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.inncrewin.waza.hibernate.Location" table="LOCATION">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="cookUserId" type="java.lang.Long">
+            <column name="COOK_USER_ID" />
+        </property>
+        <property name="locName" type="java.lang.String">
+            <column name="LOC_NAME" />
+        </property>
+        <property name="addressLine1" type="java.lang.String">
+            <column name="ADDRESS_LINE1" />
+        </property>
+        <property name="addressLine2" type="java.lang.String">
+            <column name="ADDRESS_LINE2" />
+        </property>
+        <property name="city" type="java.lang.String">
+            <column name="CITY" />
+        </property>
+        <property name="state" type="java.lang.String">
+            <column name="STATE" />
+        </property>
+        <property name="zip" type="java.lang.String">
+            <column name="ZIP" />
+        </property>
+    </class>
+</hibernate-mapping>

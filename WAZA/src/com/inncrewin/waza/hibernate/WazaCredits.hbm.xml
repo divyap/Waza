@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 8, 2013 11:35:09 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.inncrewin.waza.hibernate.WazaCredits" table="WAZACREDITS">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="couponType" type="java.lang.String">
+            <column name="COUPONTYPE" />
+        </property>
+        <property name="wazaCreditsPerType" type="java.lang.String">
+            <column name="WAZACREDITSPERTYPE" />
+        </property>
+    </class>
+</hibernate-mapping>
