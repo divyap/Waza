@@ -56,7 +56,15 @@ public class SessionManager {
 		Query queryObject = createQuery(session, queryString);
 		queryObject.setCacheable(true);
 		queryObject.setParameter(0, value);
+		
+		//List reList= queryObject.list();
+		//session.close();
 		return queryObject.list();
+
+	}
+	
+	public void close(){
+		
 	}
 
 	public int save(Object obj){
@@ -99,15 +107,13 @@ public class SessionManager {
 		return result;
 	}
 	
-	public Object load(Class clazz, Long id){
+	public Object load(Class clazz, Long id) throws HibernateException {
 		Session session = sessionFactory.openSession();
 		Object cls = null;
 		try {
-			session.load(clazz, id);
-		} catch (HibernateException e) {
-			throw new DataException(e.getMessage(), e);
+			cls=session.get(clazz, id);
 		}finally{
-			session.close();
+			//session.close();
 		}
 		return cls;
 	}

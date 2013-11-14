@@ -4,26 +4,15 @@
 <!-- Generated Oct 8, 2013 11:35:09 AM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <joined-subclass name="com.inncrewin.waza.hibernate.Cook" extends="com.inncrewin.waza.hibernate.User" table="COOK" lazy="false">
-        <key>
-            <column name="USERID" />
-        </key>
-        <property name="id" type="java.lang.Long">
-            <column name="ID" />
-        </property>
-        <property name="type" type="java.lang.String">
+        <key column= "USER_ID" />
+        <property name="type" type="java.lang.String" access="field">
             <column name="TYPE" />
         </property>
-        <property name="wazaScore" type="java.lang.String">
-            <column name="WAZASCORE" />
+        <property name="cookingLic" type="java.lang.String" access="field">
+            <column name="COOKING_LIC" />
         </property>
-        <property name="wazaBucks" type="java.lang.String">
-            <column name="WAZABUCKS" />
-        </property>
-        <property name="cookingLic" type="java.lang.String">
-            <column name="COOKINGLIC" />
-        </property>
-        <property name="licFilePath" type="java.lang.String">
-            <column name="LICFILEPATH" />
+        <property name="licFilePath" type="java.lang.String" access="field">
+            <column name="LIC_FILE_PATH" />
         </property>
         <property name="ssn" type="java.lang.String">
             <column name="SSN" />

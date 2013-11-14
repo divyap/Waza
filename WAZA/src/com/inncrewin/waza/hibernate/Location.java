@@ -6,7 +6,7 @@ public class Location implements java.io.Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 726109554435210339L;
-	private Long id;
+	private Long locationId;
 	private Long cookUserId;
 	private String locName;
 	private String addressLine1;
@@ -30,12 +30,12 @@ public class Location implements java.io.Serializable {
 		this.zip = zip;
 	}
 
-	public Long getId() {
-		return id;
+	public Long getLocationId() {
+		return locationId;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setLocationId(Long locationId) {
+		this.locationId = locationId;
 	}
 
 	public Long getCookUserId() {

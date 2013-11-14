@@ -3,14 +3,13 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated Oct 8, 2013 11:35:09 AM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="com.inncrewin.waza.hibernate.UserFoodSchedule" table="USERFOODSCHEDULE">
-        <id name="id" type="java.lang.Long">
+    <class name="com.inncrewin.waza.hibernate.UserFoodSchedule" table="USER_FOOD_SCHEDULE">
+        <id name="scheduleId" type="java.lang.Long">
             <column name="ID" />
             <generator class="assigned" />
         </id>
-        <property name="cookedItemId" type="java.lang.Long">
-            <column name="COOKED_ITEM_ID" />
-        </property>
+        <many-to-one name="foodItem" column="COOKED_ITEM_ID"
+        	class="com.inncrewin.waza.hibernate.CookedItem" />
         <property name="userId" type="java.lang.Long">
             <column name="USER_ID" />
         </property>
@@ -20,9 +19,8 @@
         <property name="quantity" type="java.lang.String">
             <column name="QUANTITY" />
         </property>
-        <property name="locationId" type="java.lang.Long">
-            <column name="LOCATION_ID" />
-        </property>
+        <many-to-one name="location" column="LOCATION_ID"
+        	class="com.inncrewin.waza.hibernate.Location" />
         <property name="price" type="java.lang.String">
             <column name="PRICE" />
         </property>

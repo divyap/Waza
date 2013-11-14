@@ -4,20 +4,26 @@
 <hibernate-configuration>
  <session-factory name="SessionFactory">
   <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-  <property name="hibernate.connection.password">wazaroot</property>
   <property name="hibernate.connection.url">jdbc:mysql://waza.cp8wd3ddgsq4.us-west-2.rds.amazonaws.com/waza</property>
   <property name="hibernate.connection.username">wazaroot</property>
+  <property name="hibernate.connection.password">wazaroot</property>
   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
   
   <property name="javax.persistence.validation.mode">none</property>
   <property name="hibernate.current_session_context_class">thread</property>
   <property name="jta.UserTransaction">UserTransaction</property>  
- 
+  <property name="hibernate.cache.use_query_cache">true</property>
+<property name="hibernate.max_fetch_depth">4</property>
+<property name="hibernate.cache.use_second_level_cache">true</property>
+<property name="hibernate.cache.use_query_cache">true</property>
+<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+
   <mapping resource="com/inncrewin/waza/hibernate/CreditCardInfo.hbm.xml"/>
   <mapping resource="com/inncrewin/waza/hibernate/CookedItem.hbm.xml"/>
   <mapping resource="com/inncrewin/waza/hibernate/CookedItemIngredients.hbm.xml"/>
   <mapping resource="com/inncrewin/waza/hibernate/Ingredient.hbm.xml"/>
   <mapping resource="com/inncrewin/waza/hibernate/User.hbm.xml"/>
+   <mapping resource="com/inncrewin/waza/hibernate/Cook.hbm.xml"/>
   <mapping resource="com/inncrewin/waza/hibernate/UserFoodSchedule.hbm.xml"/>
   <mapping resource="com/inncrewin/waza/hibernate/WazaCredits.hbm.xml"/>
   <mapping resource="com/inncrewin/waza/hibernate/Order.hbm.xml"/>

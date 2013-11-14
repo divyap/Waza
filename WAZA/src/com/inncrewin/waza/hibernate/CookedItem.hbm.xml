@@ -14,7 +14,7 @@
         <property name="title" type="java.lang.String">
             <column name="TITLE" />
         </property>
-        <property name="description" type="java.lang.String">
+        <property name="itemDesc" type="java.lang.String">
             <column name="DESCRIPTION" />
         </property>
         <property name="categoryId" type="java.lang.String">

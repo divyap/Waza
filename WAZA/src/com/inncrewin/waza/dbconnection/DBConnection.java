@@ -7,14 +7,15 @@ import java.sql.SQLException;
 public class DBConnection {
 
 	private Connection conn = null;
-
-	public static final String USER_NAME = "wazaroot";
-
-	public static final String PASSWORD = "wazaroot";
-
 	public static final String DRIVER = "com.mysql.jdbc.Driver";
 
+	public static final String USER_NAME = "wazaroot";
+	public static final String PASSWORD = "wazaroot";
 	public static final String URL = "jdbc:mysql://waza.cp8wd3ddgsq4.us-west-2.rds.amazonaws.com:3306/";
+	
+	/*public static final String URL = "jdbc:mysql://localhost:3307/";
+	public static final String USER_NAME = "root";
+	public static final String PASSWORD = "root";*/
 
 	public static final String DB_NAME = "waza";
 

@@ -2,6 +2,7 @@ package com.inncrewin.waza.hibernate;
 
 import java.io.Serializable;
 
+
 public class Order implements Serializable{
 	
 	/**
@@ -13,20 +14,20 @@ public class Order implements Serializable{
 	private String status;
 	private Long itemId;
 	private Long locationId;
-	private Long consumerId;
 	private String price;
 	private String quantity;
+	private User consumer;
 	
 	public Order(){
 		
 	}
 	
-	public Order(String date, String status, Long itemId, Long locationId, Long consumerId, String price, String quantity){
+	public Order(String date, String status, Long itemId, Long locationId, User consumer, String price, String quantity){
 		this.date = date;
 		this.status = status;
 		this.itemId = itemId;
 		this.locationId = locationId;
-		this.consumerId = consumerId;
+		this.consumer = consumer;
 		this.price = price;
 		this.quantity = quantity;
 	}
@@ -61,14 +62,6 @@ public class Order implements Serializable{
 	public void setLocationId(Long locationId) {
 		this.locationId = locationId;
 	}
-	public Long getConsumerId() {
-		return consumerId;
-	}
-
-	public void setConsumerId(Long consumerId) {
-		this.consumerId = consumerId;
-	}
-
 	public String getPrice() {
 		return price;
 	}
@@ -83,6 +76,14 @@ public class Order implements Serializable{
 
 	public void setQuantity(String quantity) {
 		this.quantity = quantity;
+	}
+
+	public User getConsumer() {
+		return consumer;
+	}
+
+	public void setConsumer(User consumer) {
+		this.consumer = consumer;
 	}
 
 }

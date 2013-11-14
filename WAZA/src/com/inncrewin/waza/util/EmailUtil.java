@@ -14,7 +14,6 @@ import javax.mail.internet.MimeMessage;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.dom4j.Element;
 
 import com.inncrewin.waza.attributes.ElementAttributes;
 
@@ -47,7 +46,7 @@ public class EmailUtil {
 		return session;
 	}
 
-	public void doSendEmail(String toRecipient, String newPassword, Element ele) {
+	public String doSendEmail(String toRecipient, String newPassword) {
 		String status = ElementAttributes.FAILURE;
 		String statusMsg = "";
 		Session session = getSession();
@@ -72,19 +71,18 @@ public class EmailUtil {
 			Transport.send(message);
 
 			status = ElementAttributes.SUCCESS;
-			statusMsg = "Sent message successfully....";
+			statusMsg = "Email sent successfully....";
 		} catch (MessagingException mex) {
 			status = ElementAttributes.FAILURE;
-			statusMsg = "Message could not be sent";
+			statusMsg = "Email could not be sent";
 			log.error(mex.getMessage());
 		}
-		ele.addAttribute(ElementAttributes.STATUS_MESSAGE, statusMsg);
-		ele.addAttribute(ElementAttributes.STATUS, status);
+		return CommonUtil.getStatusXMl(statusMsg, status);
 	}
 	
 	public static void main(String[] args){
 		String randomPassword = RandomStringUtils.randomAlphanumeric(8);
 
-		new EmailUtil().doSendEmail("divya3007@gmail.com", randomPassword, null);
+		new EmailUtil().doSendEmail("divya3007@gmail.com", randomPassword);
 	}
 }
